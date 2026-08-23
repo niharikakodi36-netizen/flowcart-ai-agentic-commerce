@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowCart AI — Agentic Commerce</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">RAZORPAY AI BUILDER 2026</div>
+      <h1>FlowCart <span>AI</span></h1>
+      <p>AI Growth & Agentic Commerce</p>
+    </div>
+    <div class="status">
+      <span class="dot"></span> Test-safe agent
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="hero card">
+      <div class="hero-copy">
+        <div class="pill">CONVERSATIONAL COMMERCE</div>
+        <h2>From “I need earbuds” to an explainable checkout.</h2>
+        <p>
+          FlowCart AI understands shopping intent, recommends relevant products,
+          proposes bounded upsells and prepares a Razorpay test order only after
+          explicit customer approval.
+        </p>
+        <div class="metrics">
+          <div><strong>AI</strong><span>intent + recommendations</span></div>
+          <div><strong>₹</strong><span>bounded transaction value</span></div>
+          <div><strong>LOG</strong><span>auditable decisions</span></div>
+        </div>
+      </div>
+      <div class="agent-orbit">
+        <div class="orbit-center">AI<br>AGENT</div>
+        <div class="orbit-item one">Intent</div>
+        <div class="orbit-item two">Catalog</div>
+        <div class="orbit-item three">Offer</div>
+        <div class="orbit-item four">Checkout</div>
+      </div>
+    </section>
+
+    <section class="card agent-card">
+      <div class="section-title">
+        <div>
+          <div class="eyebrow">SHOPPING AGENT</div>
+          <h3>Tell the agent what you want</h3>
+        </div>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </div>
+
+      <div id="chat" class="chat"></div>
+
+      <div class="quick">
+        <button data-prompt="Recommend the best earbuds under ₹3000">Earbuds under ₹3000</button>
+        <button data-prompt="I need a productivity setup under ₹4000">Productivity setup</button>
+        <button data-prompt="Show me a fitness watch">Fitness watch</button>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <input id="message" autocomplete="off" placeholder="e.g. I need wireless earbuds under ₹3000">
+        <button>Ask AI</button>
+      </form>
+    </section>
+
+    <aside class="card cart-card">
+      <div class="section-title">
+        <div>
+          <div class="eyebrow">CHECKOUT GATE</div>
+          <h3>Your cart</h3>
+        </div>
+        <span id="cartCount" class="count">0</span>
+      </div>
+
+      <div id="cartItems" class="cart-items">
+        <div class="empty">Ask the agent to add a product.</div>
+      </div>
+
+      <div id="cartSummary" class="summary hidden"></div>
+
+      <label class="approval">
+        <input type="checkbox" id="approval">
+        <span>I approve the final amount shown above. Create a Razorpay <b>Test Mode</b> order.</span>
+      </label>
+
+      <button id="checkoutBtn" class="primary full" disabled>Create Test Order</button>
+      <button id="failureBtn" class="failure full">Simulate Provider Failure</button>
+
+      <div id="checkoutMessage" class="notice"></div>
+    </aside>
+
+    <section class="card catalog-card">
+      <div class="section-title">
+        <div>
+          <div class="eyebrow">MERCHANT CATALOG</div>
+          <h3>Agent-readable product feed</h3>
+        </div>
+      </div>
+      <div id="catalog" class="catalog"></div>
+    </section>
+
+    <section class="card audit-card">
+      <div class="section-title">
+        <div>
+          <div class="eyebrow">EXPLAINABILITY</div>
+          <h3>Agent audit trail</h3>
+        </div>
+        <button id="refreshAudit" class="ghost">Refresh</button>
+      </div>
+      <div id="audit" class="audit"></div>
+    </section>
+  </main>
+
+  <footer>
+    Demo prototype • Razorpay Test Mode compatible • No live money is processed by this prototype.
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
